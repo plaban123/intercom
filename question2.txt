@@ -3,15 +3,20 @@ Just a short paragraph is fine, but I'd love to know why you're proud of it, wha
 
 Answer -
 
-One of the projects I am proud of is improving the performance of a critical user-facing product at Blippar.
+One of the projects I am proud of is improving the load time of a critical user-facing product at Blippar.
 
 This product used to consume many microservices and generate the data that is required to be shown on the UI.
-Microservices are a right way to build large systems but due to their inherent design, the user data gets fragmented.
+Microservices are a great way to build large systems but due to their inherent design, the user data gets fragmented.
 Also, unlike a single database, performing join operations across services is complicated.
 
-Hence, we decided to build an event sourcing system by using Debezium and Kafka, through which we could subscribe to data operations happening in these services and generate materialized views for the UI.
+Hence, we decided to build an event sourcing system by using Debezium and Kafka, through which we could subscribe to data operations
+happening in these services and generate materialized views for the UI.
 
-These materialized views greatly improved the performance of the application(by 5 times) and improved the user experience drastically.
+These materialized views greatly improved the load time of the product (from 10 secs to 2 secs) and drastically improved the user experience.
 
-The following document helps in visualizing the architecture 
-https://docs.google.com/drawings/d/1qik10I3JEIVckPIV2LCPU1HenWDDS1ZJuVIyU2jcbV4 
+The most important learning here was about tradeoffs. With every system architecture(like Microservices), there are tradeoffs involved and
+its very important to be aware about them.
+
+The following documents helps in visualizing the architecture and impact
+https://docs.google.com/drawings/d/1qik10I3JEIVckPIV2LCPU1HenWDDS1ZJuVIyU2jcbV4
+https://drive.google.com/file/d/0BxG2VbyMsKLWa0MwTlJhR090MDg
