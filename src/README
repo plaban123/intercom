@@ -1,0 +1,11 @@
+Usage
+
+python3 find_near_by_customers.py
+
+
+Tests
+
+To execute the tests run 
+
+python3 test.py
+
